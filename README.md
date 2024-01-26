@@ -1,7 +1,9 @@
+# CodeIgniter 4 and ReactJS CRUD API
+
 # Clone Project
 ## https://github.com/megadevlabs/reactjs-ci4-crud.git
 
-# Database SQL File Import into Database after create Database 
+# SQL File Import after create your Database 
 ### Database Name "ci4-react-crud"
 
 ### Run Backend CodeIgniter 4
