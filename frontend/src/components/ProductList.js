@@ -9,12 +9,12 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const products = await axios.get('http://localhost:8080/products');
+    const products = await axios.get('http://localhost:8080/api/products');
     setProducts(products.data);
   };
 
   const deleteProduct = async id => {
-    await axios.delete(`http://localhost:8080/products/${id}`);
+    await axios.delete(`http://localhost:8080/api/products/${id}`);
     getProducts();
   };
 

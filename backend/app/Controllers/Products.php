@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\RESTful\ResourceController;
 use CodeIgniter\API\ResponseTrait;
 use App\Models\ProductModel;
@@ -42,7 +41,7 @@ class Products extends ResourceController
      */
     public function create()
     {
-        helper('form');
+        helper(['form']);
         $rules = [
             'title' => 'required',
             'price' => 'required',
@@ -71,7 +70,7 @@ class Products extends ResourceController
      */
     public function update($id = null)
     {
-        helper('form');
+        helper(['form']);
         $rules = [
             'title' => 'required',
             'price' => 'required',
@@ -107,7 +106,7 @@ class Products extends ResourceController
         if (!$findById) return $this->failNotFound('No Data Found');
         $model->delete($id);
         $response = [
-            'status' => 201,
+            'status' => 200,
             'error' => null,
             'message' => [
                 'success' => 'Data Deleted'

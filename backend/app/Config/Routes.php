@@ -10,4 +10,10 @@ use CodeIgniter\Router\RouteCollection;
 //   $routes->resource('products');
 // });
 
-$routes->resource('products');
+// $routes->group('api/v1', ['filter' => 'cors'], function ($routes) {
+//   $routes->resource('products');
+// });
+
+$routes->group('api', ['filter' => 'cors'], function ($routes) {
+  $routes->resource('products');
+});

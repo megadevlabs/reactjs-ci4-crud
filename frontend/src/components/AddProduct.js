@@ -9,7 +9,7 @@ const AddProduct = () => {
 
   const saveProduct = async e => {
     e.preventDefault();
-    await axios.post('http://localhost:8080/products', {
+    await axios.post('http://localhost:8080/api/products', {
       title: title,
       price: price,
     });

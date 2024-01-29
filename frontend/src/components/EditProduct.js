@@ -14,7 +14,7 @@ const EditProduct = () => {
 
   const updateProduct = async e => {
     e.preventDefault();
-    await axios.patch(`http://localhost:8080/products/${id}`, {
+    await axios.patch(`http://localhost:8080/api/products/${id}`, {
       title: title,
       price: price,
     });
@@ -26,7 +26,9 @@ const EditProduct = () => {
   }, []);
 
   const getProductById = async () => {
-    const response = await axios.get(`http://localhost:8080/products/${id}`);
+    const response = await axios.get(
+      `http://localhost:8080/api/products/${id}`
+    );
     console.log(response);
     setTitle(response.data.title);
     setPrice(response.data.price);
